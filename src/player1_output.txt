@@ -1,0 +1,164 @@
+player1 has discarded 5 pebble to bag A
+player1 hand is 2, 3, 2, 11, 22, 23, 13, 21, 4
+player1 has drawn a 31 pebble from bag X
+player1 hand is 2, 3, 2, 11, 22, 23, 13, 21, 4, 31
+player1 has discarded 3 pebble to bag A
+player1 hand is 2, 2, 11, 22, 23, 13, 21, 4, 31
+player1 has drawn a 2 pebble from bag X
+player1 hand is 2, 2, 11, 22, 23, 13, 21, 4, 31, 2
+player1 has discarded 22 pebble to bag A
+player1 hand is 2, 2, 11, 23, 13, 21, 4, 31, 2
+player1 has drawn a 7 pebble from bag Y
+player1 hand is 2, 2, 11, 23, 13, 21, 4, 31, 2, 7
+player1 has discarded 4 pebble to bag B
+player1 hand is 2, 2, 11, 23, 13, 21, 31, 2, 7
+player1 has drawn a 2 pebble from bag Y
+player1 hand is 2, 2, 11, 23, 13, 21, 31, 2, 7, 2
+player1 has discarded 11 pebble to bag B
+player1 hand is 2, 2, 23, 13, 21, 31, 2, 7, 2
+player1 has drawn a 22 pebble from bag X
+player1 hand is 2, 2, 23, 13, 21, 31, 2, 7, 2, 22
+player1 has discarded 7 pebble to bag A
+player1 hand is 2, 2, 23, 13, 21, 31, 2, 2, 22
+player1 has drawn a 17 pebble from bag X
+player1 hand is 2, 2, 23, 13, 21, 31, 2, 2, 22, 17
+player1 has discarded 21 pebble to bag A
+player1 hand is 2, 2, 23, 13, 31, 2, 2, 22, 17
+player1 has drawn a 16 pebble from bag X
+player1 hand is 2, 2, 23, 13, 31, 2, 2, 22, 17, 16
+player1 has discarded 17 pebble to bag A
+player1 hand is 2, 2, 23, 13, 31, 2, 2, 22, 16
+player1 has drawn a 6 pebble from bag X
+player1 hand is 2, 2, 23, 13, 31, 2, 2, 22, 16, 6
+player1 has discarded 31 pebble to bag A
+player1 hand is 2, 2, 23, 13, 2, 2, 22, 16, 6
+player1 has drawn a 15 pebble from bag X
+player1 hand is 2, 2, 23, 13, 2, 2, 22, 16, 6, 15
+player1 has discarded 2 pebble to bag A
+player1 hand is 2, 2, 23, 13, 2, 22, 16, 6, 15
+player1 has drawn a 6 pebble from bag X
+player1 hand is 2, 2, 23, 13, 2, 22, 16, 6, 15, 6
+player1 has discarded 22 pebble to bag A
+player1 hand is 2, 2, 23, 13, 2, 16, 6, 15, 6
+player1 has drawn a 1 pebble from bag Y
+player1 hand is 2, 2, 23, 13, 2, 16, 6, 15, 6, 1
+player1 has discarded 2 pebble to bag B
+player1 hand is 2, 23, 13, 2, 16, 6, 15, 6, 1
+player1 has drawn a 1 pebble from bag Y
+player1 hand is 2, 23, 13, 2, 16, 6, 15, 6, 1, 1
+player1 has discarded 6 pebble to bag B
+player1 hand is 2, 23, 13, 2, 16, 15, 6, 1, 1
+player1 has drawn a 2 pebble from bag X
+player1 hand is 2, 23, 13, 2, 16, 15, 6, 1, 1, 2
+player1 has discarded 1 pebble to bag A
+player1 hand is 2, 23, 13, 2, 16, 15, 6, 1, 2
+player1 has drawn a 6 pebble from bag Y
+player1 hand is 2, 23, 13, 2, 16, 15, 6, 1, 2, 6
+player1 has discarded 2 pebble to bag B
+player1 hand is 23, 13, 2, 16, 15, 6, 1, 2, 6
+player1 has drawn a 7 pebble from bag Y
+player1 hand is 23, 13, 2, 16, 15, 6, 1, 2, 6, 7
+player1 has discarded 13 pebble to bag B
+player1 hand is 23, 2, 16, 15, 6, 1, 2, 6, 7
+player1 has drawn a 2 pebble from bag X
+player1 hand is 23, 2, 16, 15, 6, 1, 2, 6, 7, 2
+player1 has discarded 2 pebble to bag A
+player1 hand is 23, 2, 16, 15, 6, 1, 6, 7, 2
+player1 has drawn a 2 pebble from bag Y
+player1 hand is 23, 2, 16, 15, 6, 1, 6, 7, 2, 2
+player1 has discarded 2 pebble to bag B
+player1 hand is 23, 16, 15, 6, 1, 6, 7, 2, 2
+player1 has drawn a 2 pebble from bag X
+player1 hand is 23, 16, 15, 6, 1, 6, 7, 2, 2, 2
+player1 has discarded 15 pebble to bag A
+player1 hand is 23, 16, 6, 1, 6, 7, 2, 2, 2
+player1 has drawn a 0 pebble from bag Y
+player1 hand is 23, 16, 6, 1, 6, 7, 2, 2, 2, 0
+player1 has discarded 6 pebble to bag B
+player1 hand is 23, 16, 6, 1, 7, 2, 2, 2, 0
+player1 has drawn a 18 pebble from bag Y
+player1 hand is 23, 16, 6, 1, 7, 2, 2, 2, 0, 18
+player1 has discarded 1 pebble to bag B
+player1 hand is 23, 16, 6, 7, 2, 2, 2, 0, 18
+player1 has drawn a 7 pebble from bag Y
+player1 hand is 23, 16, 6, 7, 2, 2, 2, 0, 18, 7
+player1 has discarded 16 pebble to bag B
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 18, 7
+player1 has drawn a 18 pebble from bag Y
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 18, 7, 18
+player1 has discarded 18 pebble to bag B
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 7, 18
+player1 has drawn a 0 pebble from bag X
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 7, 18, 0
+player1 has discarded 18 pebble to bag A
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 7, 0
+player1 has drawn a 17 pebble from bag Y
+player1 hand is 23, 6, 7, 2, 2, 2, 0, 7, 0, 17
+player1 has discarded 23 pebble to bag B
+player1 hand is 6, 7, 2, 2, 2, 0, 7, 0, 17
+player1 has drawn a 16 pebble from bag Y
+player1 hand is 6, 7, 2, 2, 2, 0, 7, 0, 17, 16
+player1 has discarded 6 pebble to bag B
+player1 hand is 7, 2, 2, 2, 0, 7, 0, 17, 16
+player1 has drawn a 6 pebble from bag Y
+player1 hand is 7, 2, 2, 2, 0, 7, 0, 17, 16, 6
+player1 has discarded 0 pebble to bag B
+player1 hand is 7, 2, 2, 2, 7, 0, 17, 16, 6
+player1 has drawn a 5 pebble from bag Y
+player1 hand is 7, 2, 2, 2, 7, 0, 17, 16, 6, 5
+player1 has discarded 7 pebble to bag B
+player1 hand is 2, 2, 2, 7, 0, 17, 16, 6, 5
+player1 has drawn a 3 pebble from bag Y
+player1 hand is 2, 2, 2, 7, 0, 17, 16, 6, 5, 3
+player1 has discarded 5 pebble to bag B
+player1 hand is 2, 2, 2, 7, 0, 17, 16, 6, 3
+player1 has drawn a 4 pebble from bag Y
+player1 hand is 2, 2, 2, 7, 0, 17, 16, 6, 3, 4
+player1 has discarded 2 pebble to bag B
+player1 hand is 2, 2, 7, 0, 17, 16, 6, 3, 4
+player1 has drawn a 2 pebble from bag Y
+player1 hand is 2, 2, 7, 0, 17, 16, 6, 3, 4, 2
+player1 has discarded 4 pebble to bag B
+player1 hand is 2, 2, 7, 0, 17, 16, 6, 3, 2
+player1 has drawn a 0 pebble from bag Y
+player1 hand is 2, 2, 7, 0, 17, 16, 6, 3, 2, 0
+player1 has discarded 2 pebble to bag B
+player1 hand is 2, 7, 0, 17, 16, 6, 3, 2, 0
+player1 has drawn a 2 pebble from bag Y
+player1 hand is 2, 7, 0, 17, 16, 6, 3, 2, 0, 2
+player1 has discarded 0 pebble to bag B
+player1 hand is 2, 7, 17, 16, 6, 3, 2, 0, 2
+player1 has drawn a 10 pebble from bag X
+player1 hand is 2, 7, 17, 16, 6, 3, 2, 0, 2, 10
+player1 has discarded 7 pebble to bag A
+player1 hand is 2, 17, 16, 6, 3, 2, 0, 2, 10
+player1 has drawn a 4 pebble from bag X
+player1 hand is 2, 17, 16, 6, 3, 2, 0, 2, 10, 4
+player1 has discarded 6 pebble to bag A
+player1 hand is 2, 17, 16, 3, 2, 0, 2, 10, 4
+player1 has drawn a 21 pebble from bag Y
+player1 hand is 2, 17, 16, 3, 2, 0, 2, 10, 4, 21
+player1 has discarded 3 pebble to bag B
+player1 hand is 2, 17, 16, 2, 0, 2, 10, 4, 21
+player1 has drawn a 2 pebble from bag X
+player1 hand is 2, 17, 16, 2, 0, 2, 10, 4, 21, 2
+player1 has discarded 2 pebble to bag A
+player1 hand is 2, 17, 16, 0, 2, 10, 4, 21, 2
+player1 has drawn a 2 pebble from bag X
+player1 hand is 2, 17, 16, 0, 2, 10, 4, 21, 2, 2
+player1 has discarded 16 pebble to bag A
+player1 hand is 2, 17, 0, 2, 10, 4, 21, 2, 2
+player1 has drawn a 9 pebble from bag X
+player1 hand is 2, 17, 0, 2, 10, 4, 21, 2, 2, 9
+player1 has discarded 2 pebble to bag A
+player1 hand is 2, 17, 0, 2, 10, 4, 21, 2, 9
+player1 has drawn a 28 pebble from bag Y
+player1 hand is 2, 17, 0, 2, 10, 4, 21, 2, 9, 28
+player1 has discarded 2 pebble to bag B
+player1 hand is 17, 0, 2, 10, 4, 21, 2, 9, 28
+player1 has drawn a 2 pebble from bag Y
+player1 hand is 17, 0, 2, 10, 4, 21, 2, 9, 28, 2
+player1 has discarded 4 pebble to bag B
+player1 hand is 17, 0, 2, 10, 21, 2, 9, 28, 2
+player1 has drawn a 9 pebble from bag Y
+player1 hand is 17, 0, 2, 10, 21, 2, 9, 28, 2, 9
