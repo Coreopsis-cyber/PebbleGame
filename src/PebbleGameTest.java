@@ -8,8 +8,10 @@ import java.util.*;
 import java.io.*;
 
 import java.io.IOException;
+import org.junit.runner.RunWith;
 
-@Runwith(TestRunner.class)
+
+@RunWith(TestRunner.class)
 public class PebbleGameTest {
 
     static PebbleGame game = new PebbleGame();

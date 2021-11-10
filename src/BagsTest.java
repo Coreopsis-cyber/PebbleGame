@@ -1,3 +1,4 @@
+import junit.textui.TestRunner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +9,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import javax.management.BadBinaryOpValueExpException;
 
 import java.io.*;
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
 
