@@ -1,12 +1,6 @@
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-
-
-import static org.junit.Assert.*;
 import java.util.*;
 import java.io.*;
-
 import java.io.IOException;
 import org.junit.runner.RunWith;
 
@@ -19,15 +13,6 @@ public class PebbleGameTest {
     Bags bag2 = new Bags("bag2", new File("example_File_2.csv"));
     Bags bag3 = new Bags("bag3" , new File("example_file_3.csv"));
 
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
-    }
 
     @Test
     public void GetIfWinner() {

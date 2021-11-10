@@ -1,32 +1,15 @@
 import junit.textui.TestRunner;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.*;
-import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
-
-import javax.management.BadBinaryOpValueExpException;
-
 import java.io.*;
 import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
 
 @RunWith(TestRunner.class)
 public class BagsTest {
     File file = new File("testFile.csv");
     Bags bag = new Bags("Bag", file);
     CopyOnWriteArrayList<Integer> temp = new CopyOnWriteArrayList<Integer>();
-    
-    
-    @Before
-    public void setUp() throws Exception {
-    }
 
-    @After
-    public void tearDown() throws Exception {
-    }
 
     @Test
     public void removeRandomPebble() {
