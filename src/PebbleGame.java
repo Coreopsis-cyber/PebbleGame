@@ -251,10 +251,6 @@ public class PebbleGame {
 
         }while (!equalsE);
 
-
-
-
-
     }
 
     /**
@@ -507,14 +503,16 @@ public class PebbleGame {
         }
 
         /**
-         * @return
+         * Getter for the players name
+         * @return the players name
          */
         public String getPlayersName() {
             return this.name;
         }
 
         /**
-         * @return
+         * Getter for the current hand
+         * @return an arraylist of the players current hand
          */
         public ArrayList<Integer> getCurrentHand() {
             return this.currentHand;
