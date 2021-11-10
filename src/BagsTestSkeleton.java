@@ -11,7 +11,7 @@ import java.io.*;
 import static org.junit.Assert.*;
 
 public class BagsTestSkeleton {
-    File file = new File("exampleFile.java");
+    File file = new File("testFile.csv");
     Bags bag = new Bags("Bag", file);
     CopyOnWriteArrayList<Integer> temp = new CopyOnWriteArrayList<Integer>();
     
@@ -41,8 +41,8 @@ public class BagsTestSkeleton {
         temp.add(1);
         bag.setBagPebbles(temp);
 
-        int pebble = bag.removeRandomPebble();
-        assert(pebble == 1);
+        bag.removePebble(0);
+        assert(bag.isEmpty());
     }
 
     @Test
@@ -57,8 +57,10 @@ public class BagsTestSkeleton {
 
     @Test
     public void updateFile() {
-        File file = new File("testFile.csv");
         boolean test = true;
+        bag.emptyBagPebbles();
+        temp = new CopyOnWriteArrayList<Integer>();
+        temp.add(1);
         try{
             bag.updateFile(temp);
         }
