@@ -23,8 +23,13 @@ public class Bags {
     public Bags(){
 
     }
+    // for testing
     public void setBagPebbles(CopyOnWriteArrayList<Integer> list){
         this.bagPebbles = list;
+    }
+    // for testing
+    public void emptyBagPebbles(){
+         this.bagPebbles.clear();
     }
 
     /**

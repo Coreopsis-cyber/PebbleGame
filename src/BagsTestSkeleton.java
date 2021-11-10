@@ -36,8 +36,11 @@ public class BagsTestSkeleton {
 
     @Test
     public void removePebble() {
+        bag.emptyBagPebbles();
+        temp = new CopyOnWriteArrayList<Integer>();
         temp.add(1);
         bag.setBagPebbles(temp);
+
         int pebble = bag.removeRandomPebble();
         assert(pebble == 1);
     }
