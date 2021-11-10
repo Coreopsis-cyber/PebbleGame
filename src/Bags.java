@@ -19,13 +19,9 @@ public class Bags {
         this.name = name;
         this.fileName = fileName;
     }
- 
+
     public Bags(){
 
-    }
-    //this is for testing
-    public void setBagPebbles(CopyOnWriteArrayList<Integer> list){
-        this.bagPebbles = list;
     }
 
     /**
