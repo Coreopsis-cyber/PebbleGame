@@ -23,6 +23,9 @@ public class Bags {
     public Bags(){
 
     }
+    public void setBagPebbles(CopyOnWriteArrayList<Integer> list){
+        this.bagPebbles = list;
+    }
 
     /**
      * Removes the pebbles
