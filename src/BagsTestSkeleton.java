@@ -1,11 +1,21 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import javax.management.BadBinaryOpValueExpException;
+
+import java.io.*;
 
 import static org.junit.Assert.*;
 
 public class BagsTestSkeleton {
-
+    File file = new File("exampleFile.java");
+    Bags bag = new Bags("Bag", file);
+    CopyOnWriteArrayList<Integer> temp = new CopyOnWriteArrayList<Integer>();
+    
+    
     @Before
     public void setUp() throws Exception {
     }
@@ -16,29 +26,62 @@ public class BagsTestSkeleton {
 
     @Test
     public void removeRandomPebble() {
+        temp.add(1);
+        temp.add(3);
+        temp.add(2);
+        bag.setBagPebbles(temp);
+        int pebble = bag.removeRandomPebble();
+        assert(pebble == 1 || pebble ==2 || pebble == 3);
     }
 
     @Test
     public void removePebble() {
-    }
-
-    @Test
-    public void addPebble() {
+        temp.add(1);
+        bag.setBagPebbles(temp);
+        int pebble = bag.removeRandomPebble();
+        assert(pebble == 1);
     }
 
     @Test
     public void isEmpty() {
+        if(bag.bagPebbles.size() == 0){
+            assert(bag.isEmpty());
+        }
+        else{
+            assert(!bag.isEmpty());
+        }
     }
 
     @Test
     public void updateFile() {
+        File file = new File("testFile.csv");
+        boolean test = true;
+        try{
+            bag.updateFile(temp);
+        }
+        catch(IOException e){
+            test = false;
+        }
+        if(file.length() == 0){
+            test = false;
+        }
+        assert(test);
+        
+
     }
 
     @Test
     public void updateFileRemove() {
-    }
+        File file = new File("testFile.csv");
 
-    @Test
-    public void getBagPebbles() {
+        boolean test = true;
+        try{
+            bag.updateFileRemove();
+        }
+        catch(IOException e){
+            test = false;
+        }
+        assert(file.length() == 0);
+
     }
 }
