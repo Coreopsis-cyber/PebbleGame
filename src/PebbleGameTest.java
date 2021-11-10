@@ -15,7 +15,7 @@ public class PebbleGameTest {
 
 
     @Test
-    public void GetIfWinnerTest() {
+    public void getIfWinnerTest() {
         game.winner = false;
         assert(game.getIfWinner() == false);
         
