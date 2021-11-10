@@ -25,9 +25,7 @@ public class Bags {
     /**
      * Empty constructor
      */
-    public Bags(){
-
-    }
+    public Bags(){}
 
     /**
      * Removes the pebbles

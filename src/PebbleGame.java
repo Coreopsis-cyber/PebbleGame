@@ -280,11 +280,16 @@ public class PebbleGame {
 
             this.name = playerName;
             try {
-                fileName = new File(playerName + ".txt");
+                fileName = new File(playerName + "_output.txt");
                 if (fileName.createNewFile()) {
                     return;
                 } else {
-                    System.out.println("File already exists.");
+                    try {
+                        BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
+                        writer.close();
+                    } catch (IOException e) {
+                        System.out.println("Unable to remove previous contents of file.");
+                    }
                 }
             } catch (Throwable e) {
                 System.out.println("An error occurred.");
@@ -317,7 +322,6 @@ public class PebbleGame {
                                 int pick = pebbles.get(1);
                                 bag.removePebble(1);
                                 currentHand.add(pick);
-                                System.out.println(currentHand);
                             }
                         }
 
@@ -531,27 +535,26 @@ public class PebbleGame {
 
         /**
          * Updates player log file
-         * @param disgard boolean whether a action is discard or pick up
+         * @param discard boolean whether a action is discard or pick up
          * @param list the current hand
          * @param data the pebble being acted upon
          * @param bag the Bag it was drawn from or add to
          */
-        public void updateFile(boolean disgard, ArrayList<Integer> list, int data, String bag) {
+        public void updateFile(boolean discard, ArrayList<Integer> list, int data, String bag) {
             try {
                 String log = "";
-                if (disgard) {
+                if (discard) {
                     log += this.getPlayersName() + " has discarded " + data + " pebble to bag " + bag;
                 } else {
                     log += this.getPlayersName() + " has drawn a " + data + " pebble from bag " + bag ;
                 }
                 log += "\n" + this.getPlayersName() + " hand is " + list.toString().replaceAll("[\\[\\]]", "") ;
                 BufferedWriter buffer = new BufferedWriter(new FileWriter(this.fileName, true));
-                System.out.println(log);
                 buffer.append(log);
                 buffer.newLine();
                 buffer.close();
             } catch (IOException e) {
-                System.out.println("Something has gone really and truly wrong. ");
+                System.out.println("Cannot add to player output file");
             }
         }
 
