@@ -64,6 +64,7 @@ public class PebbleGameTest {
 
     @Test
     public void TestCheckIntInput(Scanner scan) {
+        
         assert (editiedVersionCheckIntInput("5", scan) == 5); //correct data
         assert (editiedVersionCheckIntInput("-1", scan) == -1); //erronous data
         assert (editiedVersionCheckIntInput("hello", scan) == -1); // erronous data

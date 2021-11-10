@@ -8,6 +8,7 @@ public class PebbleGameTestSkeleton {
 
     @Before
     public void setUp() throws Exception {
+
     }
 
     @After
@@ -55,6 +56,7 @@ public class PebbleGameTestSkeleton {
     }
 
     @Test
-    public void main() {
+    public static void main(String args[]) {
+        System.out.println("Yay?");
     }
 }
