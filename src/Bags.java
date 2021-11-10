@@ -1,3 +1,4 @@
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -5,31 +6,36 @@ import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.*;
 
-/**
- * Bag class that contains functionality for both black and white bags
- */
 public class Bags {
     public volatile CopyOnWriteArrayList<Integer> bagPebbles = new CopyOnWriteArrayList<Integer>();
     private String name;
     private File fileName;
 
     /**
-     * @param name Name of the bag
-     * @param fileName Associated file
+     * @param name
+     * @param fileName
      */
      public Bags(String name, File fileName) {
         this.name = name;
         this.fileName = fileName;
     }
 
-    /**
-     * Empty constructor
-     */
-    public Bags(){}
+    public Bags(){
+
+    }
+    // for testing
+    public void setBagPebbles(CopyOnWriteArrayList<Integer> list){
+        this.bagPebbles = list;
+    }
+    // for testing
+    public void emptyBagPebbles(){
+         this.bagPebbles.clear();
+    }
 
     /**
      * Removes the pebbles
-     * @return the index of the pebble chosen
+     *
+ 
      */
     public int removeRandomPebble() {
         Random rand = new Random();
@@ -37,25 +43,23 @@ public class Bags {
         bagPebbles.remove(index);
         return index;
     }
-    /**
-     * Removes the pebbles given an index
-     * @param index index of the pebble to be removed
-     */
     public void removePebble(int index){
         bagPebbles.remove(index);
     }
 
     /**
-     * Adds the pebbles to the arraylist
-     * @param weight integer value of a pebble
+     * Adds the pebbles
+     *
+     * @param weight
      */
     public void addPebble(Integer weight) {
         bagPebbles.add(weight);
     }
 
     /**
-     * Check to see if the array list containing the current pebbles is empty.
-     * @return boolean
+     * Check to see if the array list containing the current pebbles is empty
+     *
+     * @return
      */
     public boolean isEmpty() {
         if (bagPebbles.size() == 0) {
@@ -67,7 +71,8 @@ public class Bags {
 
     /**
      * Delete the contents of the file and rewrites the new array list of the pebbles
-     * @param list list of pebbles in the bag
+     *
+     * @param list
      */
     public void updateFile(CopyOnWriteArrayList<Integer> list) throws IOException {
         // some writer function here
@@ -82,10 +87,6 @@ public class Bags {
         }
     }
 
-    /**
-     * Deletes the contents of the bag
-     * @throws IOException if the file cannot be changed
-     */
     public void updateFileRemove() throws IOException {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(this.fileName, false));
@@ -97,8 +98,7 @@ public class Bags {
 
 
     /**
-     * Getter for bagPebbles
-     * @return an arraylist of integers
+     * @return
      */
     public CopyOnWriteArrayList<Integer> getBagPebbles() {
         return bagPebbles;
