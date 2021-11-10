@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * The type Pebble game.
  */
-public class PebbleGame {
+public class  PebbleGame {
 
     static volatile Bags blackBagX;
     static volatile Bags blackBagY;
@@ -179,29 +179,8 @@ public class PebbleGame {
     }
 
 
-    /**
-     * Reads the first line of the inputted file, useful for black and white bags as their data will always
-     * be on the first line
-     *
-     * @param fileName the file name
-     * @return the string
-     * @throws FileNotFoundException the file not found exception
-     */
-    public static String readFile(File fileName) throws FileNotFoundException {
-        try {
-            Scanner reader = new Scanner(fileName);
-            while (reader.hasNextLine()) {
-                String data = reader.nextLine();
-                reader.close();
-                return data;
-            }
-            reader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("File cannot be found please enter a valid file");
-        }
 
-        return null;
-    }
+
 
     /**
      * Gets next pebble.

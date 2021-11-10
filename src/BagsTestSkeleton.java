@@ -26,9 +26,11 @@ public class BagsTestSkeleton {
 
     @Test
     public void removeRandomPebble() {
+        temp = new CopyOnWriteArrayList<Integer>();
         temp.add(1);
         temp.add(3);
         temp.add(2);
+
         bag.setBagPebbles(temp);
         int pebble = bag.removeRandomPebble();
         assert(pebble == 1 || pebble ==2 || pebble == 3);
@@ -77,8 +79,6 @@ public class BagsTestSkeleton {
 
     @Test
     public void updateFileRemove() {
-        File file = new File("testFile.csv");
-
         boolean test = true;
         try{
             bag.updateFileRemove();

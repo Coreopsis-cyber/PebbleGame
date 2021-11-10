@@ -11,9 +11,9 @@ import java.io.IOException;
 public class PebbleGameTestSkeleton {
 
     static PebbleGame game = new PebbleGame();
-    Bags bag1 = new Bags();
-    Bags bag2 = new Bags();
-    Bags bag3 = new Bags();
+    Bags bag1 = new Bags("bag1", new File("example_File_1.csv"));
+    Bags bag2 = new Bags("bag2", new File("example_File_2.csv"));
+    Bags bag3 = new Bags("bag3" , new File("example_file_3.csv"));
 
     @Before
     public void setUp() throws Exception {
@@ -48,7 +48,7 @@ public class PebbleGameTestSkeleton {
         catch(IOException e){
             error = true;
         }
-        assert(error = false);
+        assert(!error);
         assert(bag1.getBagPebbles().size() == 22);
         assert(bag2.getBagPebbles().size() == 22);
         assert(bag3.getBagPebbles().size() == 22);
@@ -65,51 +65,34 @@ public class PebbleGameTestSkeleton {
 
     @Test
     public void checkFileInput() {
-        Scanner scanCorrect = new Scanner("exampleFile1.csv");
+        Scanner scanCorrect = new Scanner("example_File_1.csv");
         game.checkFileInput(scanCorrect, 1);
+        /*boolean test = false;
+
         Scanner scanIncorrect = new Scanner("player1.txt");
-        game.checkFileInput(scanIncorrect, 1);
+        try{
+            game.checkFileInput(scanIncorrect, 1);
+        }
+        catch(StackOverflowError e){
+            test = true;
+        }
+*/
         
     }
 
     @Test
     public void checkIntInput() {
+        boolean test = false;
         Scanner scanCorrect = new Scanner("5");
         game.checkIntInput(scanCorrect);
         Scanner scanIncorrect = new Scanner("Five");
         game.checkIntInput(scanIncorrect);
     }
 
-    @Test
-    public void gameMain() {
-        try{
-            PebbleGame.Player[] players = game.gameMain();
-            assert(players.length == 2);
-        }
-        catch(IOException e){
-            
-        }
-    }
-
-    @Test
-    public void readFile() {
-        try{
-            File file = new File("exampleFile1");
-            assert(game.readFile(file) == "");
-        }
-        catch(IOException e){
-
-        }
-    }
 
     @Test
     public void getNextPebble() {
         String data = "1,2,3,4,5,6,7,8,9";
         assert(data.contains(game.getNextPebble(data)));
-    }
-
-    @Test
-    public static void main(String args[]) {
-        System.out.println("Yay?");
     }
 }
