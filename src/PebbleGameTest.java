@@ -91,26 +91,37 @@ public class PebbleGameTest {
     }
 
     public static class PlayersTests{
-        PebbleGame.Player player = new PebbleGame.Player("name");
+        PebbleGame.Player player = new PebbleGame.Player("name"); // this should run the thread and set up the current hand
+
         @Test
         public void discard(){
+            try{
+                int before = player.getCurrentHand().size();
+
+                player.discard();
+                int after = player.getCurrentHand().size();
+                assert(before == after + 1);
+            }
+            catch(IOException e){
+
+            }
+
 
         }
         @Test
         public void pickUp(){
+            try {
 
-        }
-        @Test
-        public void checkBags(){
 
-        }
-        @Test
-        public void getHandSum(){
+                int before = player.getCurrentHand().size();
 
-        }
-        @Test
-        public void updateFile(){
+                player.discard();
+                int after = player.getCurrentHand().size();
+                assert (before == after - 1);
+            }
+            catch(IOException e){
 
+            }
         }
     }
 }
