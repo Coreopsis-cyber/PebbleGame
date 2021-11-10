@@ -6,7 +6,7 @@ import org.junit.runner.Runner;
 
 public class TestRunner {
     public TestRunner() {
-    }
+    };
 
     public static void main(String[] args) {
         Result result = JUnitCore.runClasses(new Class[]{BagsTest.class});

@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.junit.runner.RunWith;
 
 
-//@RunWith(TestRunner.class)
+@RunWith(TestRunner.class)
 public class PebbleGameTest {
 
     static PebbleGame game = new PebbleGame();
@@ -70,13 +70,6 @@ public class PebbleGameTest {
 
     }
 
-    /**
-    @Test
-    public void getNextPebbleTest() {
-        String data = "1,2,3,4,5,6,7,8,9";
-        assert(data.contains(game.getNextPebble(data)));
-    }
-    */
 
     public static class PlayersTests{
         PebbleGame.Player player = new PebbleGame.Player("name"); // this should run the thread and set up the current hand

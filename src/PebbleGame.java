@@ -178,24 +178,6 @@ public class  PebbleGame {
 
     }
 
-
-
-
-
-    /**
-     * Gets next pebble.
-     *
-     * @param data the data
-     * @return the next pebble
-     */
-    public static String getNextPebble(String data) {
-        // takes a string (line from a file) and picks an element of that csv List
-        String[] dataList = data.split(",");
-        Random rand = new Random();
-        int randomNum = rand.nextInt((dataList.length) + 1);
-        return dataList[randomNum];
-    }
-
     /**
      * Player won.
      *

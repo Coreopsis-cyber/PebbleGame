@@ -4,7 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.io.*;
 import org.junit.runner.RunWith;
 
-//@RunWith(TestRunner.class)
+@RunWith(TestRunner.class)
 public class BagsTest {
     File file = new File("testFile.csv");
     Bags bag = new Bags("Bag", file);
