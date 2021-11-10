@@ -10,14 +10,6 @@ import java.util.concurrent.ThreadLocalRandom;
  * The type Pebble game.
  */
 public class PebbleGame {
-    /**
-     * Adds pebbles which fit our given parameters to black bag files
-     *
-     * @param numberOfPlayers
-     * @param bag1
-     * @param bag2
-     * @param bag3
-     */
 
     static volatile Bags blackBagX;
     static volatile Bags blackBagY;
@@ -25,20 +17,38 @@ public class PebbleGame {
     static volatile Bags whiteBagA;
     static volatile Bags whiteBagB;
     static volatile Bags whiteBagC;
-    public volatile int noOfPlayers;
-    public volatile Player[] players;
     public static volatile boolean winner = false;
 
+    /**
+     *Empty constructor
+     */
     public PebbleGame() {
 
     }
+
+    /**
+     * Getter for Flag to stop threads
+     * @return boolean winner
+     */
     public static boolean getIfWinner(){
         return winner;
     }
+
+    /**
+     * Setter for Flag to stop threads
+     */
     public static void setWinnerTrue(){
         winner = true;
     }
 
+    /**
+     * Method that creates the random numbers for thr black bag
+     * @param numberOfPlayers integer number of players
+     * @param bag1 bag1 object
+     * @param bag2 bag2 object
+     * @param bag3 bag 3 object
+     * @throws IOException throws an IOException when writing to file
+     */
     public static void createBlackBags(int numberOfPlayers, Bags bag1, Bags bag2, Bags bag3) throws IOException { // method to give the black bags values at beginning of the game
         int numberOfPebbles = numberOfPlayers * 11; // as in spec
         for (int i = 0; i < numberOfPebbles; i++) { // gives each bag a pebble for numberOfPebble times with a random int value
@@ -55,8 +65,8 @@ public class PebbleGame {
     /**
      * Random number generator which generates integer numbers in a given range
      *
-     * @param min
-     * @param max
+     * @param min lower bound
+     * @param max upper bound
      * @return random number
      */
     public static int randomNumGenerator(int min, int max) {
@@ -75,7 +85,6 @@ public class PebbleGame {
     public static File checkFileInput(Scanner scan, int counter) {
         boolean fileVarificationSuccessful = false;
         File blackBagFile = null;
-        // TODO if empty then this else something else
         do {
             System.out.println("Please enter locations of bag number " + counter + " to load:");
             String blackBagName = scan.nextLine();
@@ -240,7 +249,7 @@ public class PebbleGame {
                 equalsE = true;
             }
 
-        }while (equalsE == false);
+        }while (!equalsE);
 
 
 
@@ -283,7 +292,9 @@ public class PebbleGame {
             }
         }
 
-
+        /**
+         * Method that sets up and then runs the threads until the Flag is true and stops them
+         */
         public synchronized void run() {
             boolean setUp = false;
             do {
@@ -334,6 +345,9 @@ public class PebbleGame {
 
         }
 
+        /**
+         * Method for what each string has to do for their turn
+         */
         public synchronized void turn() {
             try {
                 if (currentHand.size() == 0){
@@ -351,13 +365,9 @@ public class PebbleGame {
         }
 
         /**
-         * Gets name.
-         *
-         * @return the name
+         * Atomic method discard which picks a random pebble from current hand and discards it to the relevant white bag
          */
-
         synchronized public void discard() throws IOException {
-            //put bag setters here
             discard = true;
             int bound = currentHand.size();
             int pebbleNumber = ThreadLocalRandom.current().nextInt(0, bound-1);
@@ -389,16 +399,18 @@ public class PebbleGame {
                 whiteBagLetter = "C";
             }
             whiteBag.addPebble(pebbleWeight);
-            //whiteBag.updateFileRemove();
-            try{
             whiteBag.updateFile(whiteBag.getBagPebbles());
-            }catch (NullPointerException e){
-                System.out.println("Crash");
-            }
             updateFile(discard, currentHand, pebbleWeight, whiteBagLetter);
 
         }
 
+        /**
+         * Checks if the bags are empty and uses the corresponding white bag to fill them
+         * @param bag1 bag1 object
+         * @param bag2 bag2 object
+         * @param bag3 bag3 object
+         * @throws IOException
+         */
         synchronized public void checkBags(Bags bag1, Bags bag2, Bags bag3) throws IOException {
             //arguments must be in alphabetical order to be paired correctly
             if (bag1.isEmpty()) {
@@ -439,6 +451,10 @@ public class PebbleGame {
 
         }
 
+        /**
+         * Atomic method picks up pebble from random black bag and adds it to current hand then removes it from the relevant black bag
+         * @throws IOException
+         */
         synchronized public void pickUp() throws IOException {
             discard = false;
             Bags bag = new Bags();
@@ -477,17 +493,14 @@ public class PebbleGame {
 
                 //writes to players log
                 updateFile(discard, currentHand, pick, lastPickUp);
-                //deletes contents of bag file and replaces it with the new contents
-                //bag.updateFileRemove();
+                //Delete contents of bag file and replaces it with the new contents
                 try{
                     bag.updateFile(bag.getBagPebbles());
                 }catch(Throwable e){
-                    e.printStackTrace();
                     System.out.println("Problem updating black bag file");
                 }
 
         }
-
 
         /**
          * @return
@@ -516,8 +529,14 @@ public class PebbleGame {
             return HandSum;
         }
 
-
-        public void updateFile(boolean disgard, ArrayList<Integer> list, int data, String bag) { //focus on player output file
+        /**
+         * Updates player log file
+         * @param disgard boolean whether a action is discard or pick up
+         * @param list the current hand
+         * @param data the pebble being acted upon
+         * @param bag the Bag it was drawn from or add to
+         */
+        public void updateFile(boolean disgard, ArrayList<Integer> list, int data, String bag) {
             try {
                 String log = "";
                 if (disgard) {

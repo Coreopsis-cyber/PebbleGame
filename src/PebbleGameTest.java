@@ -5,11 +5,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
-import org.junit.experimental.runners.Enclosed;
-import org.junit.runner.RunWith;
+//import org.junit.experimental.runners.Enclosed;
+//import org.junit.runner.RunWith;
 
 
-@RunWith(Enclosed.class)
+//@RunWith(Enclosed.class)
 public class PebbleGameTest {
     public PebbleGame game = new PebbleGame();
 
