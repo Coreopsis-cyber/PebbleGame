@@ -4,7 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.io.*;
 import org.junit.runner.RunWith;
 
-@RunWith(TestRunner.class)
+//@RunWith(TestRunner.class)
 public class BagsTest {
     File file = new File("testFile.csv");
     Bags bag = new Bags("Bag", file);
@@ -12,7 +12,7 @@ public class BagsTest {
 
 
     @Test
-    public void removeRandomPebble() {
+    public void removeRandomPebbleTest() {
         temp = new CopyOnWriteArrayList<Integer>();
         temp.add(1);
         temp.add(3);
@@ -24,7 +24,7 @@ public class BagsTest {
     }
 
     @Test
-    public void removePebble() {
+    public void removePebbleTest() {
         bag.emptyBagPebbles();
         temp = new CopyOnWriteArrayList<Integer>();
         temp.add(1);
@@ -35,7 +35,7 @@ public class BagsTest {
     }
 
     @Test
-    public void isEmpty() {
+    public void isEmptyTest() {
         if(bag.bagPebbles.size() == 0){
             assert(bag.isEmpty());
         }
@@ -45,7 +45,7 @@ public class BagsTest {
     }
 
     @Test
-    public void updateFile() {
+    public void updateFileTest() {
         boolean test = true;
         bag.emptyBagPebbles();
         temp = new CopyOnWriteArrayList<Integer>();
@@ -65,7 +65,7 @@ public class BagsTest {
     }
 
     @Test
-    public void updateFileRemove() {
+    public void updateFileRemoveTest() {
         boolean test = true;
         try{
             bag.updateFileRemove();

@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.junit.runner.RunWith;
 
 
-@RunWith(TestRunner.class)
+//@RunWith(TestRunner.class)
 public class PebbleGameTest {
 
     static PebbleGame game = new PebbleGame();
@@ -15,20 +15,20 @@ public class PebbleGameTest {
 
 
     @Test
-    public void GetIfWinner() {
+    public void GetIfWinnerTest() {
         game.winner = false;
         assert(game.getIfWinner() == false);
         
     }
 
     @Test
-    public void setWinnerTrue() {
+    public void setWinnerTrueTest() {
         game.setWinnerTrue();
         assert(game.getIfWinner() == true);
     }
 
     @Test
-    public void createBlackBags() {
+    public void createBlackBagsTest() {
         int numberOfPlayers = 2;
         boolean error = false;
         try{
@@ -46,14 +46,14 @@ public class PebbleGameTest {
     }
 
     @Test
-    public void randomNumGenerator() {
+    public void randomNumGeneratorTest() {
         int randomNumber = game.randomNumGenerator(1,25);
         assert(randomNumber >= 1);
         assert(randomNumber <=25);
     }
 
     @Test
-    public void checkFileInput() {
+    public void checkFileInputTest() {
         Scanner scanCorrect = new Scanner("example_File_1.csv");
         game.checkFileInput(scanCorrect, 1);
 
@@ -63,25 +63,26 @@ public class PebbleGameTest {
 
 
     @Test
-    public void checkIntInput() {
+    public void checkIntInputTest() {
         boolean test = false;
         Scanner scanCorrect = new Scanner("5");
         game.checkIntInput(scanCorrect);
 
     }
 
-
+    /**
     @Test
-    public void getNextPebble() {
+    public void getNextPebbleTest() {
         String data = "1,2,3,4,5,6,7,8,9";
         assert(data.contains(game.getNextPebble(data)));
     }
+    */
 
     public static class PlayersTests{
         PebbleGame.Player player = new PebbleGame.Player("name"); // this should run the thread and set up the current hand
 
         @Test
-        public void discard(){
+        public void discardTest(){
             try{
                 int before = player.getCurrentHand().size();
 
@@ -96,7 +97,7 @@ public class PebbleGameTest {
 
         }
         @Test
-        public void pickUp(){
+        public void pickUpTest(){
             try {
 
 
