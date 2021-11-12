@@ -12,8 +12,10 @@ The tests we have included are for methods that are more than trivial and need t
 
 When you run the jar files you should notice that it will form the player output classes as specified in the original CA spec.
 
-Second year Software development project 
-@author Ursula Mennear Maths and Computer Science
-@author Katie Hopkins Maths and Computer Science
+Second year Software development project:
+
+@author Ursula Mennear, Maths and Computer Science
+
+@author Katie Hopkins, Maths and Computer Science
 
 
